@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./assets/raindrops_bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: sticky;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 5% auto;
+}
+
+#weather-container {
+    background: rgba(255, 255, 255, 0.3);
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: black;
+    font-size: 2.3rem;
+}
+
+h2, label, p {
+    margin: 8px 0;
+}
+
+input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    color: black;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+input::placeholder {
+    color: rgb(175, 171, 171);
+}
+
+button {
+    background: #80a2e0;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+button:hover {
+    background: #385cd3;
+}
+
+#temp-div p {
+    font-size: 60px;
+    margin-top: 10px;
+}
+
+#weather-info {
+    font-size: 20px;
+}
+
+#weather-icon {
+    margin: 0 auto 10px;
+    margin-bottom: 0;
+    display: none;
+}
+
+#hourly-forecast {
+    margin-top: 50px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+    scroll-behavior: none;
+}
+
+.hourly-item {
+    flex: 0 0 auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+}
+
+.hourly-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+#hourly-heading {
+    color: #fff;
+    margin-top: 10px;
+    display: flex;
+}
+
+@media screen and (max-width: 399px) {
+    body {
+        height: 100vh;
+        background-size: cover;
+        margin: 10% auto;
+    }
+    #weather-container {
+        max-width: 330px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    body {
+        height: 100vh;
+        background-size: cover;
+        margin: 30% auto;
+    }
+    #weather-container {
+        max-width: 320px;
+    }
+}
